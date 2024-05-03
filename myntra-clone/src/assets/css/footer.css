@@ -1,0 +1,12 @@
+.footerNavHead {
+  color: #282c3f;
+  font-size: 12px;
+  font-weight: 700;
+}
+.footerNav {
+  color: #696b79 !important;
+  font-size: 15px !important;
+}
+ .keepInTouchIcons span:not(:last-child) {
+    margin-right: 10px;
+  }

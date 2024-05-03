@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "MyCustomFont";
+  src: local("MyCustomFont"), url("./fonts/myfont.woff2") format("woff2");
+  /* Specify other font formats if needed */
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #282c3fe9;
+  font-size: 12.5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "MyCustomFont", sans-serif;
+  font-stretch: 100%;
+  letter-spacing: 1px;
+  height: 60px;
+}
+.navBarcusStyl {
+  background-color: white;
+  position: sticky;
+  top: 0%;
+  width: 100%;
+}
+.box {
+  width: 350px;
+  background-color: rgba(211, 211, 211, 0.228);
+  height: 40px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  border-radius: 2px;
+  box-shadow: 1px 1px 30px rgba(211, 211, 211, 0.164);
+  margin-right: 40px;
+}
+.searchIcon {
+  font-size: 18px;
+  margin-left: 10px;
+  color: gray;
+}
+.searchBox {
+  outline: none;
+  flex: 1;
+  height: 40px;
+  background: transparent;
+  border: none;
+  margin-left: 20px;
+}
+.box:focus-within {
+  background-color: white;
+  border: 1px solid rgba(211, 211, 211, 0.422);
+  border-radius: 5px;
+}
+.navbar-equal-space {
+  display: flex;
+  flex-grow: 0.5;
+  justify-content: space-around;
+}

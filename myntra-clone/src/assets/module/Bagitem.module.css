@@ -1,0 +1,86 @@
+.BagItemContainer {
+  border: 1px solid rgba(211, 211, 211, 0.685);
+  border-radius: 4px;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: space-between;
+  padding: 10px;
+  width: 600px; /* Add padding for better spacing */
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  .BagItemContainer {
+    max-width: 590px; /* Limit width for larger screens */
+  }
+}
+
+@media (max-width: 767px) {
+  .BagItemContainer {
+    width: 100%; /* Full width for smaller screens */
+    max-width: none; /* Remove max-width constraint */
+  }
+}
+.BagItemDelete {
+  color: #282c3f;
+  font-size: 25px;
+  position: relative;
+  top: -10px;
+  left: 10px;
+  z-index: -1;
+}
+.BagItem {
+  margin: 10px 10px;
+  display: flex;
+}
+
+.BagItemImg {
+  height: 150px;
+  width: 112px;
+}
+.bagItemSummary {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+.bagItemBrand {
+  color: #282c3fea;
+  font-size: 14px;
+  font-weight: 700;
+}
+.bagItemBranddec {
+  color: #282c3f;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: -6px;
+}
+.bagItemPrice {
+  color: #282c3f;
+  font-size: 14px;
+  font-weight: 700;
+}
+.bagItemOffPrice {
+  color: #94969f;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: line-through;
+  margin-left: 4px;
+}
+.bagItemdiscountPerc {
+  font-size: 14px;
+  color: #f16565;
+  font-weight: 400;
+  margin-left: 4px;
+}
+.bagItemReturnSec,
+.bagItemDelvSec {
+  display: flex;
+  font-size: 14px;
+}
+.bagItemReturnAva {
+  color: #404247;
+  margin-left: 4px;
+}
+.bagItemDelDate {
+  color: rgb(15, 222, 15);
+  margin-left: 4px;
+}
