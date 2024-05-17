@@ -1,7 +1,9 @@
 import { BsHandbag } from "react-icons/bs";
 import "../assets/css/desktopicon.css";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 const DesktopIcon = () => {
+  const bagItem = useSelector((state) => state.bag);
   return (
     <div className="desktopIcons">
       {/* users section */}
@@ -29,7 +31,8 @@ const DesktopIcon = () => {
           <button className="BagIcon">
             <BsHandbag />
             <span className="position-absolute top-10 start-99 translate-middle badge rounded-pill bg-danger dangerEdge">
-              1<span className="visually-hidden">unread messages</span>
+              {bagItem.length}
+              <span className="visually-hidden">unread messages</span>
             </span>
           </button>
           <span>Bag</span>

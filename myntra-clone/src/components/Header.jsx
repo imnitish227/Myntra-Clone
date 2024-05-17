@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <>
       <nav
-        className="navbar navbar-expand-md navBarcusStyl"
+        className="navbar navbar-expand-md navBarcusStyl "
         style={{ boxShadow: "0px 2px 30px rgba(211, 211, 211, 0.350)" }}
       >
         <div className="container-fluid">

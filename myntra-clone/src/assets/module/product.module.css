@@ -3,7 +3,7 @@
   height: 378px;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
-    
+
   /* user-select: none; */
 }
 .ProductImg {
@@ -55,6 +55,17 @@
   border: none;
   outline: none;
   background-color: rgb(62, 251, 9);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.productCardRemoveBtn {
+  margin-top: 5px;
+  width: 100%;
+  height: 30px;
+  border: none;
+  outline: none;
+  background-color: rgb(251, 9, 9);
   border-radius: 8px;
   font-size: 14px;
   font-weight: 600;

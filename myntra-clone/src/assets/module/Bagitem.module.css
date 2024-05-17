@@ -2,22 +2,23 @@
   border: 1px solid rgba(211, 211, 211, 0.685);
   border-radius: 4px;
   display: flex;
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 10px;
-  width: 600px; /* Add padding for better spacing */
+  height: 200px;
+  width: 600px;
   box-sizing: border-box;
 }
 @media (min-width: 768px) {
   .BagItemContainer {
-    max-width: 590px; /* Limit width for larger screens */
+    max-width: 590px;
   }
 }
 
 @media (max-width: 767px) {
   .BagItemContainer {
-    width: 100%; /* Full width for smaller screens */
-    max-width: none; /* Remove max-width constraint */
+    width: 100%;
+    max-width: none;
   }
 }
 .BagItemDelete {
@@ -26,7 +27,8 @@
   position: relative;
   top: -10px;
   left: 10px;
-  z-index: -1;
+  z-index: 1;
+  cursor: pointer;
 }
 .BagItem {
   margin: 10px 10px;

@@ -1,8 +1,8 @@
-import Product from "./Product";
+import ProductList from "../components/ProductList";
 const Home = () => {
   return (
     <div className="container bagSec">
-      <Product />
+      <ProductList />
     </div>
   );
 };

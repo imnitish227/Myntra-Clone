@@ -1,35 +1,61 @@
+import { useDispatch, useSelector } from "react-redux";
 import style from "../assets/module/product.module.css";
 import { FaStar } from "react-icons/fa";
-const Product = () => {
+import { bagAction } from "../store/bagSlice";
+const Product = ({ item }) => {
+  const bagItem = useSelector((state) => state.bag);
+  const totalBagItem = bagItem.indexOf(item.id) >= 0;
+  const dispatch = useDispatch();
+  const handleAddToBag = () => {
+    dispatch(bagAction.addToBag(item.id));
+  };
+  const handleRemove = () => {
+    dispatch(bagAction.removeFromBag(item.id));
+  };
   return (
     <div className="container">
       <div className={`${style.items}`}>
         <div className="imgSection">
-          <img
-            src="/productImg/img1.jpg"
-            alt=""
-            className={`${style.ProductImg}`}
-          />
+          <img src={item.image} alt="" className={`${style.ProductImg}`} />
         </div>
         <div className={`${style.ratingSec}`}>
           <span className={`${style.rating}`}>
-            4.5{" "}
+            {item.rating.stars}{" "}
             <span className={`${style.ratingStar}`}>
               <FaStar />
             </span>{" "}
-            | 120
+            | {item.rating.count}
           </span>
         </div>
-        <h2 className={`${style.productTitle}`}>Zarveri Pearals</h2>
+        <h2 className={`${style.productTitle}`}>{item.company}</h2>
 
-        <p className={`${style.productDes}`}>Gold-Plated jhumkas</p>
+        <p className={`${style.productDes}`}>
+          {item.item_name.substring(0, 25)}
+        </p>
         <div className={`${style.priceSec}`}>
-          <span className={`${style.currPrice}`}>Rs. 499 </span>
-          <span className={`${style.offPrice}`}>Rs. 188</span>{" "}
-          <span className={`${style.offPerc}`}>( 42% OFF)</span>
+          <span className={`${style.currPrice}`}>Rs.{item.current_price} </span>
+          <span className={`${style.offPrice}`}>
+            Rs. {item.original_price}{" "}
+          </span>{" "}
+          <span className={`${style.offPerc}`}>
+            ( {item.discount_percentage}% OFF)
+          </span>
         </div>
-
-        <button className={`${style.productCardBtn}`}>Add to Bag</button>
+        {totalBagItem ? (
+          <button
+            className={`${style.productCardRemoveBtn}`}
+            onClick={handleRemove}
+          >
+            Remove
+          </button>
+        ) : (
+          <button
+            className={`${style.productCardBtn}`}
+            onClick={handleAddToBag}
+          >
+            Add to Bag
+          </button>
+        )}
       </div>
     </div>
   );
