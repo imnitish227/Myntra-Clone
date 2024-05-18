@@ -7,14 +7,13 @@ const Bag = () => {
   const bagItem = useSelector((state) => state.bag);
   const finalItem = productItems.filter((item) => {
     const itemIndex = bagItem.indexOf(item.id);
-    return itemIndex >=0 
+    return itemIndex >= 0;
   });
- 
   return (
     <div className="container mt-4 d-flex  justify-content-evenly flex-wrap">
       <div className={`${style.bagItemSummary}`}>
-        {finalItem.map((item,index) => (
-          <Bagitem item={item} key={index}/>
+        {finalItem.map((item, index) => (
+          <Bagitem item={item} key={index} />
         ))}
       </div>
       <div className="mt-4">

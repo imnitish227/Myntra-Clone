@@ -16,7 +16,6 @@ const Bagitem = ({ item }) => {
     discount_percentage,
     return_period,
     delivery_date,
-    rating,
   } = item;
   return (
     <div className={`${style.BagItemContainer}`}>
